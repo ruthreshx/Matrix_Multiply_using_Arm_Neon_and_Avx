@@ -4,7 +4,7 @@ The code are tested using raspberry pi 4 arm64
 
 **Requirements**
 
-  	 1.GCC 10 or GCC 10+
+  	 1.GCC >=10
      
      
      2.Arm or Qemu emulator
