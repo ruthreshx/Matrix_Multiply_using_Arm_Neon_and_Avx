@@ -14,3 +14,6 @@ Based on the values after running in the rasperry pi for different matrix sixe t
 ![float64](https://user-images.githubusercontent.com/84854222/119776317-63bab980-bee2-11eb-935d-16aecdb2d595.png)
 
 
+The code speed is incresed by 10X when using auto-vectorization (eg. gcc int16.cpp -O3 int16_result)
+
+
