@@ -1,6 +1,6 @@
 # Matrix-Multiply-using-Arm-Neon
 
-The repo is about neon based matrix multiplication and differnt datatypes like int16. int32, float32 anf float64. And the performance on raspberry pi 4 arm64 is shown along with the code.
+The repo is about neon based matrix multiplication on different datatypes like int16. int32, float32 anf float64. And the performance on raspberry pi 4 arm64 is shown along with the code.
 
 **Requirements**
 
