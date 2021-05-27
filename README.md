@@ -25,7 +25,7 @@ The code speed for neon arm is incresed by 10X when using auto-vectorization (eg
 When testing on larger matrix the differnce between normal and neon mul is greater.
 
 the code is checked in both raspberry pi as well in linux x86_64 using qemu emulator
-to know more about qemu emulator refer this https://github.com/multiarch/qemu-user-static
+to know more about qemu emulator refer this link https://github.com/multiarch/qemu-user-static
 
 It is better to use Arm Architecture instead of Qemu because the performance in Qemu is quite low since its  emulated platform. (Eg. for 1000 x 1000 float32 in qemu the time taken is 49s where as in arm architecture time is 10.4s). 
 
