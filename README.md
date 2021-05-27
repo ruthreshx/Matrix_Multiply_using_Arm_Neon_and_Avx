@@ -3,9 +3,14 @@
 The code are tested using raspberry pi 4 arm64
 
 **Requirements**
-  GCC 10 or GCC 10+
+
+  	 1.GCC 10 or GCC 10+
+     
+     
+     2.Arm or Qemu emulator
  
-** Results**
+**Results**
+
 Based on the values after running in the rasperry pi for different matrix sixe the graphs are obtained
 
 ![float32](https://user-images.githubusercontent.com/84854222/119775997-0161b900-bee2-11eb-8929-33c996ded71c.png)
@@ -14,6 +19,9 @@ Based on the values after running in the rasperry pi for different matrix sixe t
 ![float64](https://user-images.githubusercontent.com/84854222/119776317-63bab980-bee2-11eb-935d-16aecdb2d595.png)
 
 
-The code speed is incresed by 10X when using auto-vectorization (eg. gcc int16.cpp -O3 int16_result)
+The code speed is incresed by 10X when using auto-vectorization (eg. gcc int16mul.c -O3 int16_result)
+
+the code is checked in both raspberry pi as well in linux x86_64 using qemu emulator
+to know more about qemu emulator refer this https://github.com/multiarch/qemu-user-static
 
 
