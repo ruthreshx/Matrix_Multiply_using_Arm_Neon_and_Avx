@@ -27,6 +27,6 @@ When testing on larger matrix the differnce between normal and neon mul is great
 the code is checked in both raspberry pi as well in linux x86_64 using qemu emulator
 to know more about qemu emulator refer this https://github.com/multiarch/qemu-user-static
 
-It ia better to use Arm Architecture instead of Qemu because the performance in Qemu is low when to arm. (eg. for 1000 x 1000 float32 time taken is 49s in qemu where as in arm time is 10.4s). When the code is Auto-vectorized the time taken is 1.4s 
+It is better to use Arm Architecture instead of Qemu because the performance in Qemu is low when to arm. (eg. for 1000 x 1000 float32 time taken is 49s in qemu where as in arm time is 10.4s). When the code is Auto-vectorized the time taken is 1.4s 
 
 
