@@ -11,7 +11,7 @@ The repo is about neon based matrix multiplication and differnt datatyes like in
  
 **Results**
 
-Based on the values after running in the rasperry pi for different matrix sixe the graphs are obtained
+Based on the values after running in the rasperry pi for different matrix size the graphs are obtained
 
 ![float32](https://user-images.githubusercontent.com/84854222/119775997-0161b900-bee2-11eb-8929-33c996ded71c.png)
 ![int16](https://user-images.githubusercontent.com/84854222/119776312-62898c80-bee2-11eb-9b45-5f0a19ede807.png)
@@ -27,6 +27,8 @@ When testing on larger matrix the differnce between normal and neon mul is great
 the code is checked in both raspberry pi as well in linux x86_64 using qemu emulator
 to know more about qemu emulator refer this https://github.com/multiarch/qemu-user-static
 
-It is better to use Arm Architecture instead of Qemu because the performance in Qemu is low when to arm. (eg. for 1000 x 1000 float32 time taken is 49s in qemu where as in arm time is 10.4s). When the code is Auto-vectorized the time taken is 1.4s 
+It is better to use Arm Architecture instead of Qemu because the performance in Qemu is quite low since its  emulated platform. (Eg. for 1000 x 1000 float32 in qemu the time taken is 49s where as in arm architecture time is 10.4s). 
+
+When the code is Auto-vectorized the time is reduced to is 1.4s in arm neon for 1k x 1k.
 
 
