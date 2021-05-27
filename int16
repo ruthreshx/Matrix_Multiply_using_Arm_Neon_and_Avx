@@ -73,8 +73,7 @@ void matrix_multiply_neon(int16_t  *A, int16_t  *B, int16_t *C, uint32_t n, uint
                         for (int k_idx=0; k_idx<k; k_idx+=8) {
                                 A_idx = i_idx + n*k_idx;
                                 B_idx = k*j_idx + k_idx;
-                                //printf(" a idx = %d b idx = %d\n",A_idx,B_idx);
-                                // Load most current A values in row 
+                                
                                 A0 = vld1q_s16(A+A_idx);
                                 A1 = vld1q_s16(A+A_idx+n);
                                 A2 = vld1q_s16(A+A_idx+2*n);
@@ -206,14 +205,11 @@ int main() {
         uint32_t m = 2*BLOCK_SIZE; // cols in B
         uint32_t k = 2*BLOCK_SIZE; // cols in a and rows in b
         
-        static int16_t A[n*k];
-        static int16_t B[k*m];
-        static int16_t D[n*m];
-        static int16_t E[n*m];
+        static int16_t A[4096]; 
+        static int16_t B[4096];
+        static int16_t D[4096];
+        static int16_t E[4096];
         
-        bool c_eq_asm;
-        bool c_eq_neon;
-
         matrix_init_rand(A, n*k);
         matrix_init_rand(B, k*m);
 
@@ -223,8 +219,8 @@ int main() {
         printf("normal mul\n");
         print_matrix(E, n, m);
         
+        printf("Neon\n");
         matrix_multiply_neon(A, B, D, n, m, k);
-        printf("Neon\n")
         print_matrix(D, n, m);
 
 }
