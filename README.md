@@ -20,7 +20,7 @@ Based on the values after running in the rasperry pi for different matrix sixe t
 
 
 
-The Graph shown are runned without auto-vectorization. 
+The Graph shown are ran without auto-vectorization. 
 The code speed for neon arm is incresed by 10X when using auto-vectorization (eg. gcc int16mul.c -O3 int16_result). 
 When testing on larger matrix the differnce between normal and neon mul is greater.
 
