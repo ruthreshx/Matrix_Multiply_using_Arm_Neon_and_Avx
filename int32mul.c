@@ -131,10 +131,10 @@ int main() {
         uint32_t m = 2*BLOCK_SIZE; // cols in B
         uint32_t k = 2*BLOCK_SIZE; // cols in a and rows in b
         
-        static int32_t A[n*k];
-        static int32_t B[k*m];
-        static int32_t D[n*m];
-        static int32_t E[n*m];
+        static int32_t A[4096];
+        static int32_t B[4096];
+        static int32_t D[4096];
+        static int32_t E[4096];
 
         matrix_init_rand(A, n*k);
         matrix_init_rand(B, k*m);
