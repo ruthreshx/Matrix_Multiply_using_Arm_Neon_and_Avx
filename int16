@@ -200,14 +200,6 @@ void matrix_init_rand(int16_t *M, uint32_t numvals) {
         }
 }
 
-void matrix_init(int16_t *M, uint32_t cols, uint32_t rows, uint32_t val) {
-        for (int i=0; i<rows; i++) {
-                for (int j=0; j<cols; j++) {
-                        M[j*rows + i] = val;
-                }
-        }
-}
-
 
 int main() {
         uint32_t n = 2*BLOCK_SIZE; // rows in A
@@ -216,7 +208,6 @@ int main() {
         
         static int16_t A[n*k];
         static int16_t B[k*m];
-        static int16_t C[n*m];
         static int16_t D[n*m];
         static int16_t E[n*m];
         
@@ -225,18 +216,15 @@ int main() {
 
         matrix_init_rand(A, n*k);
         matrix_init_rand(B, k*m);
-        matrix_init(C, n, m, 0);
 
         print_matrix(A, k, n);
         print_matrix(B, m, k);
-        print_matrix(C, n, m);
-        printf("size %d \n",n);
         matrix_multiply_c(A, B, E, n, m, k);
         printf("normal mul\n");
-                
-        matrix_multiply_neon(A, B, D, n, m, k);
-        printf("Neon\n");
         print_matrix(E, n, m);
+        
+        matrix_multiply_neon(A, B, D, n, m, k);
+        printf("Neon\n")
         print_matrix(D, n, m);
 
 }
