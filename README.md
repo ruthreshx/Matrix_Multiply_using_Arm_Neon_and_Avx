@@ -19,7 +19,7 @@ to know more about qemu emulator refer this link https://github.com/multiarch/qe
 
 It is better to use Arm Architecture instead of Qemu because the performance in Qemu is quite low since its  emulated platform. (Eg. for 1000 x 1000 float32 in qemu the time taken is 49s whereas in arm architecture time is 10.4s). 
 
-When the code is Auto-vectorized the time is reduced to 1.4s in arm neon for 1k x 1k. 
+When the code is Auto-vectorized the time is reduced to 1.4s in arm neon for 1k x 1k.  
 
 **The time chart is given below**
 
