@@ -32,5 +32,6 @@ When the code is Auto-vectorized the time is reduced to is 1.4s in arm neon for 
       300 x 300    0.532597    0.435758     0.545451   0.199766     0.542208    0.228595      0.582677    0.319158
       400 x 400    1.314986    1.004088     1.367670   0.471891     1.397881    0.547197      1.725430    0.787738
       
+ For more reference about result and graph comparison please check to the result.pdf file in this repo
 
 
