@@ -131,7 +131,7 @@ int main() {
         uint32_t m = 2*BLOCK_SIZE; // cols in B
         uint32_t k = 2*BLOCK_SIZE; // cols in a and rows in b
         
-        static int32_t A[4096];
+        static int32_t A[4096]; //A[BLOCK_SIZE*4]
         static int32_t B[4096];
         static int32_t D[4096];
         static int32_t E[4096];
