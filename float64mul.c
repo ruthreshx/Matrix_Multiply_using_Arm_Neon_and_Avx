@@ -91,7 +91,7 @@ int main() {
         uint32_t n = 2*BLOCK_SIZE; // rows in A
         uint32_t m = 2*BLOCK_SIZE; // cols in B
         uint32_t k = 2*BLOCK_SIZE; // cols in a and rows in b
-        static float64_t A[562500];
+        static float64_t A[562500]; //A[BLOCK_SIZE*4]
         static float64_t B[562500];
         static float64_t C[562500];
         static float64_t D[562500];
