@@ -14,7 +14,7 @@ static int b[25000000] ;
 static int c[25000000] ;
 static int d[25000000] ;
 static int e[25000000] ;
-printf("size = %d \n",MAX_DIM);
+//printf("size = %d \n",MAX_DIM);
 int n= MAX_DIM*MAX_DIM;
 for (int i = 0; i <MAX_DIM; ++i)
 {
