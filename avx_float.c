@@ -10,7 +10,7 @@ static float a[5000][5000] __attribute__ ((aligned(16)));
 static float b[5000][5000] __attribute__ ((aligned(16)));
 static float c[5000][5000] __attribute__ ((aligned(16)));
 static float d[5000][5000] __attribute__ ((aligned(16)));
-static float e[5000][5000] __attribute__ ((aligned(16)));
+static float e[5000][5000] __attribute__ ((aligned(16))); 
 for (int i = 0; i < MAX_DIM; ++i)
 {
 	for (int j = 0; j < MAX_DIM; ++j)
