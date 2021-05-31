@@ -100,7 +100,7 @@ void print_matrix(float32_t *M, uint32_t cols, uint32_t rows) {
                 for (int j=0; j<cols; j++) {
                         printf("%f ", M[j*rows + i]);
                 }
-                printf("\n");
+                printf("\n"); 
         }
         printf("\n");
 }
@@ -114,7 +114,7 @@ int main() {
         uint32_t n = 2*BLOCK_SIZE; // rows in A
         uint32_t m = 2*BLOCK_SIZE; // cols in B
         uint32_t k = 2*BLOCK_SIZE; // cols in a and rows in b
-        static float32_t A[256];
+        static float32_t A[256]; // A[BLOCK_SIZE*4]
         static float32_t B[256];
         static float32_t D[256];
         static float32_t E[256];
