@@ -1,6 +1,6 @@
 # Matrix-Multiply-using-Arm-Neon
 
-The repo is about neon based matrix multiplication on different datatypes like int16. int32, float32 anf float64. And the performance on raspberry pi 4 arm64 is shown along with the code.
+The repo is about neon based matrix multiplication on different data types like int16. int32, float32 and float64. And the performance on raspberry pi 4 arm64 is shown along with the code.
 
 **Requirements**
 
@@ -11,15 +11,15 @@ The repo is about neon based matrix multiplication on different datatypes like i
  
 **Results**
  
-The code speed for neon arm is incresed by 10X when using auto-vectorization (eg. gcc int16mul.c -O3 int16_result). 
-When testing on larger matrix the differnce between normal and neon mul is greater.
+The code speed for neon arm is increased by 10X when using auto-vectorization (eg. gcc int16mul.c -O3 int16_result). 
+When testing on larger matrices the difference between normal and neon mul is greater.
 
-the code is checked in both raspberry pi as well in linux x86_64 using qemu emulator
+the code is checked on raspberry pi and in linux x86_64 using qemu emulator
 to know more about qemu emulator refer this link https://github.com/multiarch/qemu-user-static
 
-It is better to use Arm Architecture instead of Qemu because the performance in Qemu is quite low since its  emulated platform. (Eg. for 1000 x 1000 float32 in qemu the time taken is 49s where as in arm architecture time is 10.4s). 
+It is better to use Arm Architecture instead of Qemu because the performance in Qemu is quite low since its  emulated platform. (Eg. for 1000 x 1000 float32 in qemu the time taken is 49s whereas in arm architecture time is 10.4s). 
 
-When the code is Auto-vectorized the time is reduced to is 1.4s in arm neon for 1k x 1k.
+When the code is Auto-vectorized the time is reduced to 1.4s in arm neon for 1k x 1k. 
 
 **The time chart is given below**
 
